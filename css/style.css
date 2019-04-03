@@ -1,3 +1,36 @@
-h1 {
-  color: fuchsia;
+body {
+	font:arial;
+}
+
+#header {
+	width:900px;
+	text-align:center;
+	font-size:100px;
+	margin:0 auto;
+	margin-top:20px;
+}
+
+#input {
+	padding:10px;
+}
+
+#search {
+	padding:10px;
+	background-color:white;
+	border:1px solid black;
+}
+
+#search:hover {
+	cursor:pointer;
+}
+
+
+#movieparent {
+	display:flex;
+	margin-top:50px;
+}
+
+#moviechild {
+	justify-content:center;
+	width:25%;
 }
