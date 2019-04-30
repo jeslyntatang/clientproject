@@ -1,37 +1,70 @@
 body {
-	font:arial;
+	font-family: 'Amiri', serif;
+	background-color:#FAECCD;
 }
 
 #header {
-	width:900px;
+	width:1200px;
 	text-align:center;
-	font-size:100px;
 	margin:0 auto;
-	margin-top:20px;
+	margin-top:-10px;
+	height:300px;
+	background-image:url("https://image.freepik.com/free-vector/cinema-background-pattern_1061-522.jpg");
+}
+
+#title {
+	font-family:'Rouge Script',cursive;
+	width:500px;
+	margin:0 auto;
+	background-color:black;
+	color:white;
+	font-size:80px;
+}
+
+.titletext{
+	color:white;
+	text-decoration:none;
 }
 
 #input {
 	padding:10px;
+	font-family: 'Crimson Text', serif;
+	font-size:18px;
+	width:200px;
 }
 
 #search {
 	padding:10px;
 	background-color:white;
 	border:1px solid black;
+	font-family: 'Crimson Text', serif;
+	font-size:18px;
 }
 
 #search:hover {
 	cursor:pointer;
 }
 
-
 #movieparent {
 	display:flex;
 	margin-top:50px;
 }
 
-#moviechild {
+#moviechild1, #moviechild2, #moviechild3, #moviechild4 {
 	justify-content:center;
-	width:25%;
+	width:850px;
 	text-align:center;
+}
+
+#moviechild img {
+	cursor:pointer;
+}
+
+#movieTitle{
+	font-size:20px;
+	font-weight:bold;
+}
+
+#summary {
+	margin-top:-15px;
 }
