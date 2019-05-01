@@ -61,10 +61,14 @@ body {
 }
 
 #movieTitle{
-	font-size:20px;
+	font-size:30px;
 	font-weight:bold;
+	padding-left:74px;
+	font-family: 'Raleway', sans-serif;
 }
 
-#summary {
-	margin-top:-15px;
+.movieInfo{
+	font-size:20px;
+	padding-left:74px;
+	font-family: 'Raleway', sans-serif;
 }

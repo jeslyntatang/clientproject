@@ -18,36 +18,37 @@ $("#search").click(function() {
                 url2 : custom_api_url,
                 method: "GET",
                 success:function(reply) {
-                    function storage(idImg){
-                        return idImg;
-                    }
                     for(let i = 1; i < 5; i++){
                         var randomIndex = Math.floor(Math.random() * (10 - 4) + 4);
                         console.log(randomIndex);
                         var movie = response.Search[randomIndex];
-                        var movieId = movie.imdbID;
-                        $("#moviechild" + i).append("<a href = 'infopage.html'> <img src=" + movie.Poster + "data-movieId=" + movieId + " onclick ='" + storage(movieId) + "'/> </a>");
-                        console.log(movieId);
+                        var movieId2 = movie.imdbID;
+                        $("#moviechild" + i).append("<a href = 'infopage.html?q=" + movieId2+ "'> <img src=" + movie.Poster + " data-id=" + movieId2 + "> </a>");
+                        console.log(movieId2);
                     }
                     $("img").click(function(){
-                        var custom2 = "https://www.omdbapi.com/?i=" + movieId + "&apikey=e6878204";
-                        console.log(movieId);
+                        var newId = $(this).data("id");
+                        var custom2 = "https://www.omdbapi.com/?i=" + newId + "&apikey=e6878204";
+                        console.log(newId);
                         $.ajax({
                             url: custom2,
                             method:"GET",
+                            error:function(reply) {
+                                console.log("error");
+                            },
                             success:function(reply){
                               var clickedMovie = reply.Title;
                               console.log(clickedMovie);
                                 
-                            //var t = document.getElementById("movieTitle");
-                            //var y = document.createTextNode("This just got added");
-                           // t.appendChild(y);
+                        /*    var title = document.getElementById("movieTitle");
+                            var add = document.createTextNode(" added");
+                            title.appendChild(add);*/
                            
-                           var title = movie.Title;
+                            var title = movie.Title;
                            var summary = movie.Plot; 
                            var year = movie.Year;
-                           $("#movieTitle").html(title + "(" + year + ")");
-                           $("#summary").html(summary);
+                           $("#movieTitle").append(title + "(" + year + ")");
+                           $("#summary").append(summary);
 
                                 console.log("movie: " + movie.Title);
                                 console.log("year: " + movie.Year);
