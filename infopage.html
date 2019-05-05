@@ -25,10 +25,10 @@
   </div>
 
   <div id="info">
-    <p id="movieTitle">movie</p>
-    <p class="movieInfo" id = "director"> director</p>
-    <p class="movieInfo" id = "writer">writer</p>
-    <p class="movieInfo" id = "plot">plot</p>
+    <p id="movieTitle"></p>
+    <p class="movieInfo" id = "director"></p>
+    <p class="movieInfo" id = "writer"></p>
+    <p class="movieInfo" id = "plot"></p>
 
   </div>
 
@@ -60,9 +60,9 @@
         var clickedMovie = reply.Title;
         console.log(clickedMovie);
         $("#movieTitle").text(reply.Title + " (" + reply.Year + ")");
-        $("#director").text(reply.Director);
-        $("#writer").text(reply.Writer);
-        $("#plot").text(reply.Plot);
+        $("#director").text("Director: " + reply.Director);
+        $("#writer").text("Writer: " + reply.Writer);
+        $("#plot").text("Summary: " + reply.Plot);
       }
     });
   </script>
